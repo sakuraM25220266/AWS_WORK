@@ -9,25 +9,26 @@ import org.apache.logging.log4j.Logger;
 public class Play {
     Judge judge = new Judge();
     Logger logger = LogManager.getLogger();
+
     /**
-     * じゃんけんの一連の流れを行う。
-     * SelectOptionクラスを実行し、オプション選択でプレイヤーが0を入力した際に実行される。
+     * じゃんけんの一連の流れを行う。<br>
+     * SelectOptionクラスを実行し、オプション選択でプレイヤーが0を入力した際に実行される。<br>
      */
     public void playJanken() {
         Player player = new Player();
         Npu npu = new Npu();
         Judge judge = new Judge();
         MatchRecord matchRecord = new MatchRecord();
-        
-        //プレイヤーの手を決定する
+
+        // プレイヤーの手を決定する
         String playerHand = player.decidePlayerHand();
         logger.info("あなた:" + playerHand);
 
-        //NPUの手を決定する
+        // NPUの手を決定する
         String npuHand = npu.decideNpuHand();
         logger.info("対戦相手:" + npuHand);
 
-        //勝敗を判定し、結果を表示する
+        // 勝敗を判定し、結果を表示する
         judge.judge(player, npu);
         int result = judge.getResult();
         judge.show(result);

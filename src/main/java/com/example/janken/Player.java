@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
  * コンソールに0～2を入力してもらい、その値によってプレイヤーのじゃんけんの手が決まる。<br>
  * 0:グー<br>
  * 1:チョキ<br>
- * 2:パー
+ * 2:パー<br>
  */
 public class Player {
     final String ROCK = "グー";

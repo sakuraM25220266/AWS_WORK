@@ -15,12 +15,13 @@ public class Judge {
     Logger logger = LogManager.getLogger();
 
     /**
-     * プレイヤーの出した手によって判定するメソッドを分ける。
-     * プレイヤーの手がグーのときjudgeRock()メソッドを実行する。
-     * プレイヤーの手がチョキのときjudgeScissors()メソッドを実行する。
-     * プレイヤーの手がパーのときjudgePaper()メソッドを実行する。
-     * @param npu 
-     * @param player 
+     * プレイヤーの出した手によって判定するメソッドを分ける。<br>
+     * プレイヤーの手がグーのときjudgeRock()メソッドを実行する。<br>
+     * プレイヤーの手がチョキのときjudgeScissors()メソッドを実行する。<br>
+     * プレイヤーの手がパーのときjudgePaper()メソッドを実行する。<br>
+     * 
+     * @param npu    <br>
+     * @param player <br>
      */
     public void judge(Player player, Npu npu) {
         if (player.getInput() == 0) {
@@ -33,14 +34,15 @@ public class Judge {
     }
 
     /**
-     * プレイヤーの出した手がグーのときに、勝敗を判定し結果を表示する。
-     * npu == 0のとき、NPUの手はグー
-     * npu == 1のとき、NPUの手はチョキ
-     * npu == 2のとき、NPUの手はパー
-     * 戻り値が10のとき、あいこ
-     * 戻り値が20のとき、勝ち
-     * 戻り値が30のとき、負け
-     * @param npu
+     * プレイヤーの出した手がグーのときに、勝敗を判定し結果を表示する。<br>
+     * npu == 0のとき、NPUの手はグー<br>
+     * npu == 1のとき、NPUの手はチョキ<br>
+     * npu == 2のとき、NPUの手はパー<br>
+     * 戻り値が10のとき、あいこ<br>
+     * 戻り値が20のとき、勝ち<br>
+     * 戻り値が30のとき、負け<br>
+     * 
+     * @param npu <br>
      */
     public int judgeRock(int npu) {
         if (npu == 0) {
@@ -52,11 +54,12 @@ public class Judge {
     }
 
     /**
-     * プレイヤーの出した手がチョキのときに、勝敗を判定し結果を表示する。
-     * npu == 0のとき、NPUの手はグー
-     * npu == 1のとき、NPUの手はチョキ
-     * npu == 2のとき、NPUの手はパー
-     * @param npu
+     * プレイヤーの出した手がチョキのときに、勝敗を判定し結果を表示する。<br>
+     * npu == 0のとき、NPUの手はグー<br>
+     * npu == 1のとき、NPUの手はチョキ<br>
+     * npu == 2のとき、NPUの手はパー<br>
+     * 
+     * @param npu <br>
      */
     public static int judgeScissors(int npu) {
         if (npu == 0) {
@@ -68,11 +71,12 @@ public class Judge {
     }
 
     /**
-     * プレイヤーの出した手がパーのときに、勝敗を判定し結果を表示する。
-     * npu == 0のとき、NPUの手はグー
-     * npu == 1のとき、NPUの手はチョキ
-     * npu == 2のとき、NPUの手はパー
-     * @param npu
+     * プレイヤーの出した手がパーのときに、勝敗を判定し結果を表示する。<br>
+     * npu == 0のとき、NPUの手はグー<br>
+     * npu == 1のとき、NPUの手はチョキ<br>
+     * npu == 2のとき、NPUの手はパー<br>
+     * 
+     * @param npu <br>
      */
     public static int judgePaper(int npu) {
         if (npu == 0) {
@@ -84,10 +88,10 @@ public class Judge {
     }
 
     /**
-     * じゃんけんの結果を表示する。
-     * result == 10のとき、あいこ
-     * result == 20のとき、プレイヤーの勝ち
-     * result == 30のとき、プレイヤーの負け
+     * じゃんけんの結果を表示する。<br>
+     * result == 10のとき、あいこ<br>
+     * result == 20のとき、プレイヤーの勝ち<br>
+     * result == 30のとき、プレイヤーの負け<br>
      */
     public void show(int result) {
         if (result == 10) {
@@ -99,7 +103,7 @@ public class Judge {
         }
     }
 
-    public int getResult(){
+    public int getResult() {
         return result;
     }
 }

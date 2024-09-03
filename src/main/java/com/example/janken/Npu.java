@@ -3,11 +3,11 @@ package com.example.janken;
 import java.util.Random;
 
 /**
- * NPUのじゃんけんの手を取得するクラス。
- * 0～2の乱数を生成し、その値によってNpuの手が決まる。
- * 0:グー
- * 1:チョキ
- * 2:パー
+ * NPUのじゃんけんの手を取得するクラス。<br>
+ * 0～2の乱数を生成し、その値によってNpuの手が決まる。<br>
+ * 0:グー<br>
+ * 1:チョキ<br>
+ * 2:パー<br>
  */
 public class Npu {
     final String ROCK = "グー";
@@ -17,8 +17,8 @@ public class Npu {
     private String npuHand = null;
 
     /**
-     * 0～2の乱数を生成し、その値によってCPUのじゃんけんの手を取得する。
-     * @return npuHand
+     * 0～2の乱数を生成し、その値によってCPUのじゃんけんの手を取得する。<br>
+     * @return npuHand <br>
      */
     public String decideNpuHand() {
         // 0～2までの乱数を生成する

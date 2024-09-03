@@ -13,15 +13,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * じゃんけんの対戦履歴を管理するクラス。
- * CSVファイルへの対戦履歴の書き込み、読み込みを行う。
+ * じゃんけんの対戦履歴を管理するクラス。<br>
+ * CSVファイルへの対戦履歴の書き込み、読み込みを行う。<br>
  */
 public class MatchRecord {
     public String path = "C:\\Users\\9004091159\\Desktop\\JankenRecord.csv";
     Logger logger = LogManager.getLogger();
 
     /**
-     * じゃんけんをした時の日時、プレイヤーの手、NPUの手、結果を、CSVファイルに書き込む。
+     * じゃんけんをした時の日時、プレイヤーの手、NPUの手、結果を、CSVファイルに書き込む。F
      */
     public void writeRecord(String playerHand, String npuHand, int result) {
         try {
