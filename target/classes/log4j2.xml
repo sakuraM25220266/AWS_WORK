@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE project> -->
+<Configuration>
+	<Properties>
+		<Property name="format">%d{yyyy/MM/dd HH:mm:ss.SSS} [%t] %-6p %c{10} %m%n</Property>
+	</Properties>
+
+	<Appenders>
+		<!-- コンソール出力設定 -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout charset="UTF-8">
+				<pattern>${format}</pattern>
+			</PatternLayout>
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		<!-- trace以上のログはコンソールに出力する -->
+		<Root level="debug">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
