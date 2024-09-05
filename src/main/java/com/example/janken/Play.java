@@ -16,7 +16,7 @@ public class Play {
      */
     public void playJanken() {
         Player player = new Player();
-        Npu npu = new Npu();
+        Npc npc = new Npc();
         Judge judge = new Judge();
         MatchRecord matchRecord = new MatchRecord();
 
@@ -24,15 +24,15 @@ public class Play {
         String playerHand = player.decidePlayerHand();
         logger.info("あなた:" + playerHand);
 
-        // NPUの手を決定する
-        String npuHand = npu.decideNpuHand();
-        logger.info("対戦相手:" + npuHand);
+        // NPCの手を決定する
+        String npcHand = npc.decideNpcHand();
+        logger.info("対戦相手:" + npcHand);
 
         // 勝敗を判定し、結果を表示する
-        judge.judge(player, npu);
+        judge.judge(player, npc);
         int result = judge.getResult();
         judge.show(result);
 
-        matchRecord.writeRecord(playerHand, npuHand, result);
+        matchRecord.writeRecord(playerHand, npcHand, result);
     }
 }

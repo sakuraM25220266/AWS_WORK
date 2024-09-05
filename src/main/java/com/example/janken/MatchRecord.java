@@ -21,9 +21,9 @@ public class MatchRecord {
     Logger logger = LogManager.getLogger();
 
     /**
-     * じゃんけんをした時の日時、プレイヤーの手、NPUの手、結果を、CSVファイルに書き込む。F
+     * じゃんけんをした時の日時、プレイヤーの手、NPCの手、結果を、CSVファイルに書き込む。F
      */
-    public void writeRecord(String playerHand, String npuHand, int result) {
+    public void writeRecord(String playerHand, String npcHand, int result) {
         try {
             PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, true)));
 
@@ -32,7 +32,7 @@ public class MatchRecord {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 
             // String playerHand = player.getPlayerHand();
-            // String npuHand = npu.getNpuHand();
+            // String npcHand = npc.getNpcHand();
 
             String resultText;
             if (result == 10) {
@@ -44,8 +44,8 @@ public class MatchRecord {
             } else {
                 resultText = "無効な結果";
             }
-            // じゃんけんを行った日時、プレイヤーの手、NPUの手、じゃんけんの結果をカンマ区切りでファイルに書き込む
-            String record = String.format("%s,%s,%s,%s", formatter.format(now), playerHand, npuHand, resultText);
+            // じゃんけんを行った日時、プレイヤーの手、NPCの手、じゃんけんの結果をカンマ区切りでファイルに書き込む
+            String record = String.format("%s,%s,%s,%s", formatter.format(now), playerHand, npcHand, resultText);
             pw.println(record);
             pw.flush();
             pw.close();

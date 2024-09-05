@@ -20,34 +20,34 @@ public class Judge {
      * プレイヤーの手がチョキのときjudgeScissors()メソッドを実行する。<br>
      * プレイヤーの手がパーのときjudgePaper()メソッドを実行する。<br>
      * 
-     * @param npu    <br>
+     * @param npc    <br>
      * @param player <br>
      */
-    public void judge(Player player, Npu npu) {
-        if (player.getInput() == 0) {
-            result = judgeRock(npu.getNpu());
-        } else if (player.getInput() == 1) {
-            result = judgeScissors(npu.getNpu());
-        } else if (player.getInput() == 2) {
-            result = judgePaper(npu.getNpu());
+    public void judge(Player player, Npc npc) {
+        if (player.getInpct() == 0) {
+            result = judgeRock(npc.getNpc());
+        } else if (player.getInpct() == 1) {
+            result = judgeScissors(npc.getNpc());
+        } else if (player.getInpct() == 2) {
+            result = judgePaper(npc.getNpc());
         }
     }
 
     /**
      * プレイヤーの出した手がグーのときに、勝敗を判定し結果を表示する。<br>
-     * npu == 0のとき、NPUの手はグー<br>
-     * npu == 1のとき、NPUの手はチョキ<br>
-     * npu == 2のとき、NPUの手はパー<br>
+     * npc == 0のとき、NPCの手はグー<br>
+     * npc == 1のとき、NPCの手はチョキ<br>
+     * npc == 2のとき、NPCの手はパー<br>
      * 戻り値が10のとき、あいこ<br>
      * 戻り値が20のとき、勝ち<br>
      * 戻り値が30のとき、負け<br>
      * 
-     * @param npu <br>
+     * @param npc <br>
      */
-    public int judgeRock(int npu) {
-        if (npu == 0) {
+    public int judgeRock(int npc) {
+        if (npc == 0) {
             return 10;
-        } else if (npu == 1) {
+        } else if (npc == 1) {
             return 20;
         } else
             return 30;
@@ -55,16 +55,16 @@ public class Judge {
 
     /**
      * プレイヤーの出した手がチョキのときに、勝敗を判定し結果を表示する。<br>
-     * npu == 0のとき、NPUの手はグー<br>
-     * npu == 1のとき、NPUの手はチョキ<br>
-     * npu == 2のとき、NPUの手はパー<br>
+     * npc == 0のとき、NPCの手はグー<br>
+     * npc == 1のとき、NPCの手はチョキ<br>
+     * npc == 2のとき、NPCの手はパー<br>
      * 
-     * @param npu <br>
+     * @param npc <br>
      */
-    public static int judgeScissors(int npu) {
-        if (npu == 0) {
+    public static int judgeScissors(int npc) {
+        if (npc == 0) {
             return 30;
-        } else if (npu == 1) {
+        } else if (npc == 1) {
             return 10;
         } else
             return 20;
@@ -72,16 +72,16 @@ public class Judge {
 
     /**
      * プレイヤーの出した手がパーのときに、勝敗を判定し結果を表示する。<br>
-     * npu == 0のとき、NPUの手はグー<br>
-     * npu == 1のとき、NPUの手はチョキ<br>
-     * npu == 2のとき、NPUの手はパー<br>
+     * npc == 0のとき、NPCの手はグー<br>
+     * npc == 1のとき、NPCの手はチョキ<br>
+     * npc == 2のとき、NPCの手はパー<br>
      * 
-     * @param npu <br>
+     * @param npc <br>
      */
-    public static int judgePaper(int npu) {
-        if (npu == 0) {
+    public static int judgePaper(int npc) {
+        if (npc == 0) {
             return 20;
-        } else if (npu == 1) {
+        } else if (npc == 1) {
             return 30;
         } else
             return 10;
@@ -99,7 +99,7 @@ public class Judge {
         } else if (result == 20) {
             logger.info(WIN + "です！");
         } else if (result == 30) {
-            logger.info(LOSE + "あなたの負けです！");
+            logger.info(LOSE + "です！");
         }
     }
 

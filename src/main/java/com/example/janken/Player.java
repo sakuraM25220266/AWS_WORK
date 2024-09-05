@@ -16,7 +16,7 @@ public class Player {
     final String ROCK = "グー";
     final String SCISSORS = "チョキ";
     final String PAPER = "パー";
-    private int input;
+    private int inpct;
     private String playerHand = null;
 
     Logger logger = LogManager.getLogger();
@@ -33,15 +33,15 @@ public class Player {
         while (true) {
             try {
                 logger.info("出したい手を0～2の中から半角で入力してください(0:グー、1:チョキ、2:パー)");
-                input = scan.nextInt();
+                inpct = scan.nextInt();
 
-                if (input == 0) {
+                if (inpct == 0) {
                     playerHand = ROCK;
                     break;
-                } else if (input == 1) {
+                } else if (inpct == 1) {
                     playerHand = SCISSORS;
                     break;
-                } else if (input == 2) {
+                } else if (inpct == 2) {
                     playerHand = PAPER;
                     break;
                 } else {
@@ -56,8 +56,8 @@ public class Player {
     }
 
 
-    public int getInput(){
-        return input;
+    public int getInpct(){
+        return inpct;
     }
 
     public String getPlayerHand(){
