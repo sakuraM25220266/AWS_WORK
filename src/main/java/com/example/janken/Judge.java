@@ -24,11 +24,11 @@ public class Judge {
      * @param player <br>
      */
     public void judge(Player player, Npc npc) {
-        if (player.getInpct() == 0) {
+        if (player.getInput() == 0) {
             result = judgeRock(npc.getNpc());
-        } else if (player.getInpct() == 1) {
+        } else if (player.getInput() == 1) {
             result = judgeScissors(npc.getNpc());
-        } else if (player.getInpct() == 2) {
+        } else if (player.getInput() == 2) {
             result = judgePaper(npc.getNpc());
         }
     }

@@ -21,7 +21,7 @@ public class MatchRecord {
     Logger logger = LogManager.getLogger();
 
     /**
-     * じゃんけんをした時の日時、プレイヤーの手、NPCの手、結果を、CSVファイルに書き込む。F
+     * じゃんけんをした時の日時、プレイヤーの手、NPCの手、結果を、CSVファイルに書き込む。
      */
     public void writeRecord(String playerHand, String npcHand, int result) {
         try {
@@ -31,8 +31,8 @@ public class MatchRecord {
             LocalDateTime now = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 
-            // String playerHand = player.getPlayerHand();
-            // String npcHand = npc.getNpcHand();
+            String playerHand = player.getPlayerHand();
+            String npcHand = npc.getNpcHand();
 
             String resultText;
             if (result == 10) {

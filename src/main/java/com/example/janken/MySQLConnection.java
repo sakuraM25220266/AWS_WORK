@@ -9,9 +9,12 @@ import java.sql.Statement;
 public class MySQLConnection {
     public static void main(String[] args) {
         // MySQL接続情報
-        String url = "jdbc:mysql://localhost:3306/mysql"; // データベースのURL
-        String username = "root"; // データベースのユーザー名
-        String password = "cnct2d6"; // データベースのパスワード
+        // データベースのURL
+        String url = "jdbc:mysql://localhost:3306/mysql";
+        // データベースのユーザー名
+        String username = "root"; 
+        // データベースのパスワード
+        String password = "cnct2d6"; 
 
         // MySQLへの接続
         try (Connection connection = DriverManager.getConnection(url, username, password)) {

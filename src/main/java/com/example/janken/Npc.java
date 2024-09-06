@@ -1,6 +1,6 @@
 package com.example.janken;
 
-import java.util.Random;
+
 
 /**
  * NPCのじゃんけんの手を取得するクラス。<br>
@@ -10,37 +10,23 @@ import java.util.Random;
  * 2:パー<br>
  */
 public class Npc {
-    final String ROCK = "グー";
-    final String SCISSORS = "チョキ";
-    final String PAPER = "パー";
-    private int npc;
-    private String npcHand = null;
-
-    /**
-     * 0～2の乱数を生成し、その値によってCPUのじゃんけんの手を取得する。<br>
-     * @return npcHand <br>
-     */
-    public String decideNpcHand() {
-        // 0～2までの乱数を生成する
-        Random rand = new Random();
-        npc = rand.nextInt(3);
-        // 生成した乱数をもとに、NPCの手を表示する
-        // 0の場合はグー、1の場合はチョキ、2の場合はパー
-        if (npc == 0) {
-            npcHand = ROCK;
-        } else if (npc == 1) {
-            npcHand = SCISSORS;
-        } else if (npc == 2) {
-            npcHand = PAPER;
-        }
-        return npcHand;
+    // じゃんけんで出す手
+    private String hand = null;
+            
+    // セッター
+    public void setHand(String hand) {
+        this.hand = hand;
     }
-
-    public int getNpc(){
-        return npc;
+    
+    // ゲッター
+    public String getHand() {
+        return hand;
     }
+    
 
-    public String getNpcHand(){
-        return npcHand;
-    }
+    
+
+   
+
+    
 }
